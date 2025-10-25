@@ -9,5 +9,67 @@ The Bangla News Image Summarizer is designed to automate the process of reading 
 
 - Extract readable Bangla text from scanned newspaper images.
 - Clean and preprocess extracted text by removing noise and stopwords.
-- Generate concise summaries using NLP techniques (Gensim/Sumy).
-- Store summaries in structured format (CSV/JSON) and upload to Google Drive.
+- Generate concise summaries using NLP techniques.
+- Store summaries in structured format (CSV/JSON) to Google Drive.
+
+```text
+Images (data/) 
+    │
+    ├─ OCR → Raw Text (output/text/raw/)
+    │
+    ├─ Cleaning → Clean Text (output/text/clean/)
+    │
+    ├─ Stopword Removal → No Stopwords (output/text/no_stopwords/)
+    │
+    ├─ Preprocessing → Preprocessed Text (output/text/preprocessed/)
+    │
+    └─ Summarization → Summaries (output/summaries/)
+           ├─ Individual summary files
+           ├─ Combined CSV (summaries.csv)
+           └─ Combined JSON (summaries.json)
+```
+
+## Directory Structure 
+
+```
+BanglaNewsSummarizer/
+│
+├── data/                              # Original newspaper images (stored in Google Drive)
+├── resources/                         # Extra resources like stopword lists
+│   └── stopwords-bn.txt
+└── output/
+    ├── text/
+    │   ├── raw/                       # OCR-extracted raw text
+    │   ├── clean/                     # Cleaned text
+    │   ├── no_stopwords/              # Text without stopwords
+    │   └── preprocessed/              # Tokenized & preprocessed text
+    ├── summaries/                     # Individual summaries
+    ├── summaries.csv                  # Combined summaries CSV (title, link, summary)
+    └── summaries.json                 # Combined summaries JSON
+```
+#### Note:
+- Large folders (data/ and output/) are stored in Google Drive.
+- Source code and resources are available in GitHub.
+- The Google Drive folder contains all images, intermediate text files, and generated summaries.
+- Google Drive link: [BanglaNewsSummarizer Drive Folder](https://drive.google.com/drive/folders/1o30kg-7ezd8IYRyrzHp1K1-tHjp7ZKGA?usp=sharing)
+
+## Installation & Setup
+
+### 1. Clone this repository:
+```
+git clone https://github.com/yourusername/BanglaNewsSummarizer.git
+cd BanglaNewsSummarizer
+```
+### 2. Install required Python packages:
+```
+pip install -r requirements.txt
+```
+### 3. Install Tesseract OCR for Bangla:
+```
+sudo apt install tesseract-ocr tesseract-ocr-ben
+```
+### 4. Mount Google Drive in Colab to access images and output folders:
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
