@@ -55,21 +55,51 @@ BanglaNewsSummarizer/
 
 ## Installation & Setup
 
-### 1. Clone this repository:
+Clone this repository:
 ```
 git clone https://github.com/yourusername/BanglaNewsSummarizer.git
 cd BanglaNewsSummarizer
 ```
-### 2. Install required Python packages:
+Install required Python packages:
 ```
 pip install -r requirements.txt
 ```
-### 3. Install Tesseract OCR for Bangla:
+Install Tesseract OCR for Bangla:
 ```
 sudo apt install tesseract-ocr tesseract-ocr-ben
 ```
-### 4. Mount Google Drive in Colab to access images and output folders:
+Mount Google Drive in Colab to access images and output folders:
 ```
 from google.colab import drive
 drive.mount('/content/drive')
 ```
+## Usage
+
+- Open ``BanglaNewsSummarizer.ipynb`` in Google Colab.
+- Set paths for your ``data/`` folder and ``output/`` folders.
+- Run the notebook cells in order:
+```
+    OCR → Raw Text
+    Cleaning → Clean Text
+    Stopword Removal → No Stopwords
+    Preprocessing → Preprocessed Text
+    Summarization → Summaries
+```
+- Outputs:
+```
+    Individual summary files in output/summaries/
+    Combined CSV: output/summaries.csv
+    Combined JSON: output/summaries.json
+```
+
+## Key Features
+- Full Bangla OCR with preprocessing.
+- Bangla stopword removal for cleaner summaries.
+- LexRank summarization with frequency-based fallback.
+- Saves both individual summary files and combined CSV/JSON.
+
+## References
+
+- [Pytesseract](https://pypi.org/project/pytesseract/) – OCR engine for Python
+- [Sumy](https://pypi.org/project/sumy/) – Text summarization library
+- [Bangla Stopwords List](https://github.com/stopwords-iso/stopwords-bn/blob/master/stopwords-bn.txt)
