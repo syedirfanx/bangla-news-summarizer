@@ -57,8 +57,8 @@ BanglaNewsSummarizer/
 
 Clone this repository:
 ```
-git clone https://github.com/yourusername/BanglaNewsSummarizer.git
-cd BanglaNewsSummarizer
+git clone https://github.com/syedirfanx/bangla-news-summarizer.git
+cd bangla-news-summarizer
 ```
 Install required Python packages:
 ```
@@ -75,21 +75,21 @@ drive.mount('/content/drive')
 ```
 ## Usage
 
-- Open ``BanglaNewsSummarizer.ipynb`` in Google Colab.
+- Open ``bangla_news_summarizer.ipynb`` in Google Colab.
 - Set paths for your ``data/`` folder and ``output/`` folders.
 - Run the notebook cells in order:
 ```
-    OCR → Raw Text
-    Cleaning → Clean Text
-    Stopword Removal → No Stopwords
-    Preprocessing → Preprocessed Text
-    Summarization → Summaries
+OCR → Raw Text
+Cleaning → Clean Text
+Stopword Removal → No Stopwords
+Preprocessing → Preprocessed Text
+Summarization → Summaries
 ```
 - Outputs:
 ```
-    Individual summary files in output/summaries/
-    Combined CSV: output/summaries.csv
-    Combined JSON: output/summaries.json
+Individual summary files in output/summaries/
+Combined CSV: output/summaries.csv
+Combined JSON: output/summaries.json
 ```
 
 ## Key Features
