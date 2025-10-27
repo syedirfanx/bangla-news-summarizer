@@ -103,3 +103,10 @@ Combined JSON: output/summaries.json
 - [Pytesseract](https://pypi.org/project/pytesseract/) – OCR engine for Python
 - [Sumy](https://pypi.org/project/sumy/) – Text summarization library
 - [Bangla Stopwords List](https://github.com/stopwords-iso/stopwords-bn/blob/master/stopwords-bn.txt)
+
+## Project Demonstration
+
+Watch the project walkthrough video here:
+[Watch on Google Drive](https://drive.google.com/file/d/12Hy-6xV8KzcXKZLD4zBl8bJUAjcYVRMJ/view?usp=sharing)
+
+_Note: The audio in the video is slightly low due to microphone limitations. Please use headphones for better clarity._
